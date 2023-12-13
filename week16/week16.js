@@ -18,12 +18,11 @@ document.querySelector('.b-1').onclick = makeOne;
 
 const paragraphTwo = document.getElementById('practicum2');
 
-/*function makeTwo() {
-	//Ваш код
-	const practOne = document.forms[0];
-	paragraphTwo.innerText = practOne;
-	console.log(paragraphTwo.getAttribute('name'));
-}*/
+function makeTwo() {
+	const practTwo = document.forms[0].getAttribute('name');
+	paragraphTwo.innerText = practTwo;
+	console.log(paragraphTwo);
+}
 
 document.querySelector('.b-2').onclick = makeTwo;
 
@@ -34,7 +33,9 @@ document.querySelector('.b-2').onclick = makeTwo;
 const paragraphThree = document.getElementById('practicum3');
 
 function makeThree() {
-	//Ваш код
+	const practThree = document.forms[document.forms.length-1].getAttribute('name');
+	paragraphThree.innerText = practThree;
+	console.log(paragraphThree);
 }
 
 document.querySelector('.b-3').onclick = makeThree;
@@ -420,3 +421,8 @@ function handleSubmit(event) {
 
 	//Ваш код
 }
+
+
+
+
+
