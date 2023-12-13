@@ -55,9 +55,13 @@ document.querySelector('.b-3').onclick = makeThree;
 const paragraphFour = document.getElementById('practicum4');
 
 function makeFour() {
-	//Ваш код
+	let formNames = [];  //Создайте пустой массив formNames для хранения названий форм
+	for (let i = 0; i < document.forms.length; i++) {
+		formNames.push(document.forms[i].getAttribute('name'));	
+		}
+		let formNamesCut = formNames.join(', ');
+		paragraphFour.innerText = formNamesCut;
 }
-
 document.querySelector('.b-4').onclick = makeFour;
 
 //Задание 5
@@ -68,7 +72,8 @@ document.querySelector('.b-4').onclick = makeFour;
 const paragraphFive = document.getElementById('practicum5');
 
 function makeFive() {
-	//Ваш код
+	const practFive = document.forms.formThree.elements.length;
+	paragraphFive.innerText = practFive;
 }
 
 document.querySelector('.b-5').onclick = makeFive;
@@ -80,7 +85,8 @@ document.querySelector('.b-5').onclick = makeFive;
 const paragraphSix = document.getElementById('practicum6');
 
 function makeSix() {
-	//Ваш код
+	const practSix = document.forms.formTwo.elements.length;
+	paragraphSix.innerText = practSix;
 }
 
 document.querySelector('.b-6').onclick = makeSix;
@@ -99,7 +105,11 @@ document.querySelector('.b-6').onclick = makeSix;
 const paragraphSeven = document.getElementById('practicum7');
 
 function makeSeven() {
-	//Ваш код
+	elementsList = '';
+	for (let i = 0; i < document.forms[1].elements.length; i++){
+		elementsList += `-${document.forms[1].elements[i].name} `;
+	}
+	paragraphSeven.textContent = elementsList;
 }
 
 document.querySelector('.b-7').onclick = makeSeven;
