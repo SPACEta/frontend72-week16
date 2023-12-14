@@ -265,7 +265,9 @@ document.querySelector('.b-14').onclick = checkOption;
 //- Установите значение selectedIndex равным индексу опции, которую вы хотите выбрать по умолчанию
 
 function makeFifteen() {
-	//Ваш код
+	const oneForm = document.forms[0];
+	const oneFormSelect = oneForm.elements.firstSelect;
+	oneFormSelect.selectedIndex = 2;
 }
 
 makeFifteen();
@@ -279,7 +281,9 @@ makeFifteen();
 //- Установите значение checked равным true для выбранного варианта
 
 function makeSixteen() {
-	//Ваш код
+	const twoForm = document.forms[1];
+	const twoFormCheckThree = twoForm.elements.checkboxThree;
+	twoFormCheckThree.checked = true;
 }
 
 makeSixteen();
