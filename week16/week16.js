@@ -192,7 +192,12 @@ document.querySelector('.b-11').onclick = makeEleven;
 const paragraphTwelve = document.getElementById('practicum12');
 
 function makeTwelve() {
-	//Ваш код
+	const twoForm = document.forms[1];
+	const twoFormCheckOne = twoForm.elements.checkboxOne;
+	const twoFormCheckTwo = twoForm.elements.checkboxTwo;
+	const twoFormCheckThree = twoForm.elements.checkboxThree;
+	const idCheck = `${twoFormCheckOne.id} ${twoFormCheckTwo.id} ${twoFormCheckThree.id}`;
+	paragraphTwelve.textContent = idCheck;
 }
 
 document.querySelector('.b-12').onclick = makeTwelve;
@@ -209,8 +214,13 @@ document.querySelector('.b-12').onclick = makeTwelve;
 const paragraphThirteen = document.getElementById('practicum13');
 
 function checkButton(e) {
-	//Ваш код
-}
+	const fourthForm = document.forms[3];
+	const fourthFormRadio = fourthForm.elements.fourthName;
+	if (fourthFormRadio.checked) {
+		paragraphThirteen.textContent = "Кнопка выбрана";
+	} else {
+		paragraphThirteen.textContent = "Кнопка не выбрана";
+	}
 
 document.querySelector('.b-13').addEventListener('click', checkButton);
 
@@ -447,8 +457,4 @@ function handleSubmit(event) {
 
 	//Ваш код
 }
-
-
-
-
 
