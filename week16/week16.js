@@ -213,16 +213,18 @@ document.querySelector('.b-12').onclick = makeTwelve;
 
 const paragraphThirteen = document.getElementById('practicum13');
 
-function checkButton(e) {
+function checkButton() {
 	const fourthForm = document.forms[3];
 	const fourthFormRadio = fourthForm.elements.fourthName;
+
 	if (fourthFormRadio.checked) {
 		paragraphThirteen.textContent = "Кнопка выбрана";
 	} else {
 		paragraphThirteen.textContent = "Кнопка не выбрана";
 	}
-
+}
 document.querySelector('.b-13').addEventListener('click', checkButton);
+
 
 //Задание 14
 //Проверьте какой вариант выбран в первой форме
@@ -239,7 +241,17 @@ document.querySelector('.b-13').addEventListener('click', checkButton);
 const paragraphFourteen = document.getElementById('practicum14');
 
 function checkOption() {
-	//Ваш код
+	const oneForm = document.forms[0];
+	const oneFormSelect = oneForm.elements.firstSelect;
+	oneFormSelect.selectedIndex = 1;
+
+	if (oneFormSelect.value === "Опция 1") {
+		paragraphFourteen.innerText = "Выбран первый вариант";
+	} else if (oneFormSelect.value === "Опция 2") {
+		paragraphFourteen.innerText = "Выбран второй вариант";
+	} else if (oneFormSelect.value === "Опция 3") {
+		paragraphFourteen.innerText = "Выбран третий вариант";
+	}
 }
 
 document.querySelector('.b-14').onclick = checkOption;
@@ -444,7 +456,7 @@ formThree.addEventListener('submit', handleSubmitTwentyNine);*/
 //Задание 30
 //При отправке второй формы выведите значения выбранных вариантов в консоль
 
-const formTwo = document.forms.formTwo;
+/*const formTwo = document.forms.formTwo;
 const resultElement = document.getElementById('result30');
 
 formTwo.addEventListener('submit', handleSubmit);
@@ -457,3 +469,4 @@ function handleSubmit(event) {
 
 	//Ваш код
 }
+*/
