@@ -105,7 +105,7 @@ document.querySelector('.b-6').onclick = makeSix;
 const paragraphSeven = document.getElementById('practicum7');
 
 function makeSeven() {
-	elementsList = '';
+	let elementsList = '';
 	for (let i = 0; i < document.forms[1].elements.length; i++){
 		elementsList += `-${document.forms[1].elements[i].name} `;
 	}
@@ -120,7 +120,11 @@ document.querySelector('.b-7').onclick = makeSeven;
 const paragraphEight = document.getElementById('practicum8');
 
 function makeEight() {
-	//Ваш код
+	let elementsList = '';
+	for (let i = 0; i < document.forms[0].elements.length; i++){
+		elementsList += `-${document.forms[0].elements[i].name} `;
+	}
+	paragraphEight.textContent = elementsList;
 }
 
 document.querySelector('.b-8').onclick = makeEight;
@@ -131,7 +135,12 @@ document.querySelector('.b-8').onclick = makeEight;
 const paragraphNine = document.getElementById('practicum9');
 
 function makeNine() {
-	//Ваш код
+	const thirdForm = document.forms[2].elements;
+	let elementsList = " ";
+	for (let i = 0; i < thirdForm.length; i++){
+		elementsList += `-${thirdForm[i].name} `;
+	}
+	paragraphNine.textContent = elementsList;
 }
 
 document.querySelector('.b-9').onclick = makeNine;
@@ -143,7 +152,8 @@ document.querySelector('.b-9').onclick = makeNine;
 const paragraphTen = document.getElementById('practicum10');
 
 function makeTen() {
-	//Ваш код
+	const radioElement = document.forms[3].elements.fourthName.value;
+	paragraphTen.textContent = radioElement;
 }
 
 document.querySelector('.b-10').onclick = makeTen;
@@ -161,7 +171,13 @@ document.querySelector('.b-10').onclick = makeTen;
 const paragraphEleven = document.getElementById('practicum11');
 
 function makeEleven() {
-	//Ваш код
+	const oneForm = document.forms[0];
+	const oneFormSelect = oneForm.elements.firstSelect;
+	let optionsValues = " ";
+	for (let i = 0; i < oneFormSelect.length; i++){
+		optionsValues += `-${oneFormSelect[i].value} `;
+	}
+	paragraphEleven.textContent = optionsValues;
 }
 
 document.querySelector('.b-11').onclick = makeEleven;
