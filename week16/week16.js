@@ -306,7 +306,7 @@ formOne.addEventListener("submit", function (event) {
 	const firstEmail = formOne.elements.firstEmail.value;
 	const errorMessage = document.getElementById("errorMessage");
 
-if (firstName.trim() === '' || firstEmail.trim() === '') {
+	if (firstName.trim() === '' || firstEmail.trim() === '') {
 		errorMessage.textContent = "Все поля формы должны быть заполнены";
 	} else {
 		errorMessage.textContent = "";
@@ -324,7 +324,7 @@ if (firstName.trim() === '' || firstEmail.trim() === '') {
 
 formOne.addEventListener('submit', function (event) {
 	event.preventDefault(); //Отмена отправки
-	//Ваш код
+	formOne.reset();
 });
 
 //Задание 19
@@ -335,11 +335,17 @@ formOne.addEventListener('submit', function (event) {
 //- В обработчике события, используя условные операторы (if), проверьте выбранную опцию
 //- В зависимости от выбранной опции, измените цвет фона страницы, используя свойство document.body.style.backgroundColor
 
-//const selectElement = //Ваш код
+const selectElement = document.getElementById('firstSelect');
 
-// selectElement.onchange = function () {
-// 	//Ваш код
-// };
+	selectElement.onchange = function () {
+	if (selectElement.value === "Опция 1") {
+		document.body.style.backgroundColor = "red";
+	} else if (selectElement.value === "Опция 2") {
+		document.body.style.backgroundColor = "green";
+	} else if (selectElement.value === "Опция 3") {
+		document.body.style.backgroundColor = "brown";
+	}
+};
 
 //Задание 20
 //Добавьте валидацию для поля Email
