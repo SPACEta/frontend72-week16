@@ -356,12 +356,19 @@ const selectElement = document.getElementById('firstSelect');
 //- В обработчике события, используя регулярное выражение (RegExp), проверьте введенное значение поля Email
 //- В зависимости от результата проверки, измените стиль поля Email (например, установите класс с ошибкой) и отобразите сообщение об ошибке в элементе <p> (добавьте элемент самостоятельно) с помощью свойства textContent.
 
-//const emailInput = //Ваш код
-/*const errorMessage = document.getElementById('errorMessage');
+const emailInput = document.forms.formOne.elements.firstEmail;
+const errorMessage = document.getElementById('errorMessage');
 
 emailInput.oninput = function () {
-	//Ваш код
-};*/
+	let emailRegexp = /^\w+@\w+\.\w+$/;
+	let emailValue = emailInput.value;
+
+	if (emailRegexp.test(emailValue)) {
+		errorMessage.textContent = "";
+	} else {
+		errorMessage.textContent = "Неправильный формат почты";
+	}
+};
 
 //Задание 21
 //При отправке второй формы выполняется проверка всех чекбоксов. Если ни один из чекбоксов не выбран, отмените отправку формы и выведите сообщение об ошибке в элементе с id "result21".
