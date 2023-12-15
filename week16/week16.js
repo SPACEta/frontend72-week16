@@ -302,14 +302,14 @@ const formOne = document.forms.formOne;
 formOne.addEventListener("submit", function (event) {
 	event.preventDefault(); //Отмена отправки
 
-	const firstName = formOne.elements.firstName;
-	const firstEmail = formOne.elements.firstEmail;
+	const firstName = formOne.elements.firstName.value;
+	const firstEmail = formOne.elements.firstEmail.value;
 	const errorMessage = document.getElementById("errorMessage");
 
-if (firstName.value === " " || firstEmail.value === " " || firstName.value === "" || firstEmail.value === "") {
+if (firstName.trim() === '' || firstEmail.trim() === '') {
 		errorMessage.textContent = "Все поля формы должны быть заполнены";
 	} else {
-		formOne.submit();
+		errorMessage.textContent = "";
 	}
 });
 
