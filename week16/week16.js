@@ -299,11 +299,20 @@ makeSixteen();
 
 const formOne = document.forms.formOne;
 
-formOne.addEventListener('submit', function (event) {
+formOne.addEventListener("submit", function (event) {
 	event.preventDefault(); //Отмена отправки
 
-	//Ваш код
+	const firstName = formOne.elements.firstName;
+	const firstEmail = formOne.elements.firstEmail;
+	const errorMessage = document.getElementById("errorMessage");
+
+if (firstName.value === " " || firstEmail.value === " " || firstName.value === "" || firstEmail.value === "") {
+		errorMessage.textContent = "Все поля формы должны быть заполнены";
+	} else {
+		formOne.submit();
+	}
 });
+
 
 //Задание 18
 //Очистите все поля первой формы после отправки
