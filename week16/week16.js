@@ -423,7 +423,8 @@ fourthCheck.addEventListener('change', function() {
 //Подсказка: для установки атрибута используйте методы forEach и setAttribute
 
 document.querySelector('.b-24').onclick = function () {
-	const inputs = document.querySelectorAll("input");
+	const inputs = document.querySelectorAll('input');
+	
 	inputs.forEach(function (input) {
 		input.setAttribute('placeholder', 'Введите данные'); 
 	});
@@ -437,11 +438,11 @@ document.querySelector('.b-25').onclick = function () {
 
 	inputs.forEach(function (input) {
 		input.addEventListener('focus', function () {
-			//Ваш код
+			input.style.border = '#00ff00'; //Изменение границы при фокусе
 		});
 
 		input.addEventListener('blur', function () {
-			//Ваш код
+			input.style.border = ''; // Восстановление стандартной границы после потери фокуса
 		});
 	});
 };
