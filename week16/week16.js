@@ -384,7 +384,9 @@ document.querySelector('.b-21').onclick = function (event) {
 	});
 
 	if (!isChecked) {
-		//Ваш код
+		event.preventDefault();
+		document.getElementById('result21').textContent = 'Ни один из чекбоксов не выбран, выберите нужный вариант, пожалуйста';
+
 	} else {
 		document.getElementById('result21').textContent = 'Проверка пройдена';
 	}
@@ -397,7 +399,8 @@ document.querySelector('.b-22').onclick = function (event) {
 	const nameInput = document.forms.formThree.elements.thirdName;
 
 	if (nameInput.value.trim() === '') {
-		//Ваш код
+		event.preventDefault();
+		document.getElementById('result22').textContent = 'Поле Имя пустое, введите имя, пожалуйста';
 	} else {
 		document.getElementById('result22').textContent = 'Проверка пройдена';
 	}
@@ -407,12 +410,23 @@ document.querySelector('.b-22').onclick = function (event) {
 //При выборе опции "Я хочу зарегистрироваться" в четвёртой форме кнопка должна быть разблокирована. В противном случае, сделайте кнопку отправки формы заблокированной.
 //Подсказка: используйте свойство disabled
 
+const fourthButton = document.forms[3].elements.fourthButton; // Получаем кнопку отправки
+const fourthCheck = document.forms[3].elements.fourthName; // Получаем чекбокс
+fourthButton.setAttribute('disabled', 'disabled'); //добавляем новый атрибут с указанным значением
+
+fourthCheck.addEventListener('change', function() {
+	fourthButton.disabled = !fourthCheck.checked;
+});
+
 //Задание 24
 //Найдите все поля ввода на странице и установите им атрибут "placeholder" со значением "Введите данные"
 //Подсказка: для установки атрибута используйте методы forEach и setAttribute
 
 document.querySelector('.b-24').onclick = function () {
-	//Ваш код
+	const inputs = document.querySelectorAll("input");
+	inputs.forEach(function (input) {
+		input.setAttribute('placeholder', 'Введите данные'); 
+	});
 };
 
 //Задание 25
