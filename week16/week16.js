@@ -452,7 +452,9 @@ document.querySelector('.b-25').onclick = function () {
 
 document.querySelector('.b-26').onclick = function (event) {
 	event.preventDefault();
-	//Ваш код
+	const result26 = document.getElementById('result26');
+	const placeholderThird = document.forms[2].elements.thirdName.value;
+	result26.textContent = placeholderThird;
 };
 
 //Задание 27
