@@ -464,7 +464,8 @@ const formTwoInputs = document.querySelectorAll('.secondForm input');
 
 formTwoInputs.forEach(function (input) {
 	input.addEventListener('input', function () {
-		//Ваш код
+	const result27 = document.getElementById('result27');
+	result27.textContent = "Изменение внесено";
 	});
 });
 
@@ -474,32 +475,33 @@ formTwoInputs.forEach(function (input) {
 const selectFormThree = document.getElementById('firstSelect');
 
 selectFormThree.addEventListener('change', function () {
-	//Ваш код
+		const result28 = document.getElementById('result28');
+	result28.textContent = "Опция выбрана";
 });
 
 //Задание 29
 //При заполнении всех полей третьей формы выведите их значения в консоль. Используйте JavaScript без использования объекта FormData.
 
-/*const formThree = document.forms.formThree;
-const nameInputThree = form.elements.thirdName;
-const emailInputThree = form.elements.thirdEmail;
+const formThree = document.forms.formThree;
+const nameInputThree = formThree.elements.thirdName;
+const emailInputThree = formThree.elements.thirdEmail;
 
 function handleSubmitTwentyNine(event) {
 	event.preventDefault();
 
 	if (nameInputThree.value && emailInputThree.value) {
-		//Ваш код
+		console.log(`Имя ${nameInputThree.value}, Почта ${emailInputThree.value}`);
 	} else {
 		console.log('Пожалуйста, заполните все поля формы.');
 	}
 }
 
-formThree.addEventListener('submit', handleSubmitTwentyNine);*/
+formThree.addEventListener('submit', handleSubmitTwentyNine);
 
 //Задание 30
 //При отправке второй формы выведите значения выбранных вариантов в консоль
 
-/*const formTwo = document.forms.formTwo;
+const formTwo = document.forms.formTwo;
 const resultElement = document.getElementById('result30');
 
 formTwo.addEventListener('submit', handleSubmit);
@@ -510,6 +512,5 @@ function handleSubmit(event) {
 	const checkboxes = formTwo.querySelectorAll('input[type="checkbox"]:checked');
 	const selectedOptions = Array.from(checkboxes).map((checkbox) => checkbox.labels[0].textContent);
 
-	//Ваш код
+	console.log(selectedOptions);
 }
-*/
