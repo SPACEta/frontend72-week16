@@ -12,69 +12,69 @@
 <body>
     <div class="container">
         <h1>Форма регистрации</h1>
+        <div class="form">
+            <form name="formOne" class="firstForm" novalidate >
 
-        <color class="formsAll">
-            <div class="form">
-                <form name="formOne" class="firstForm">
-                    
-                    <label for="firstName" class="form__label">Имя:</label>
-                    <input type="text" id="firstName" name="firstName" class="form__input" placeholder="Введите имя" minlength="2" maxlength="20" pattern="^[a-zA-Zа-яА-Я ]+$" required />
-                    <span id="errorName"></span>
-                    
+                <label for="firstName" class="form__label">Имя:</label>
+                <input type="text" name="name" placeholder="Имя" minlength="2" maxlength="20" pattern="......." required />
+                <br />
 
-                    <label for="firstEmail" class="form__label">Email:</label>
-                    <input type="email" id="firstEmail" name="firstEmail" class="form__input" placeholder="Введите email" required />
-                    <span id="errorEmail"></span>
+                <label for="firstEmail" class="form__label">Email:</label>
+                <input type="email" name="email" placeholder="E-Mail" required />
+                <br />
+
+                <label for="age" class="form__label">Возраст:</label>
+                <input type="text" name="age" placeholder="Возраст" required />
+                <br />
                 
-                    <label for="age" class="form__label">Возраст:</label>
-                    <input type="number" id="firstAge" name="firstAge" class="form__input" placeholder="Введите возраст" required />
-                    <span id="errorAge"></span>
-                    
-                    <label for="gender" class="form__label">Пол:</label>
-                    <input
-                        type="radio"
-                        name="gender"
-                        value="men"
-                        class="form__input" />
-                    <span>мужчина</span>
-                    </br>
-                    
-                    <input
-                        type="radio"
-                        name="gender"
-                        value="woman"
-                        class="form__input" />
-                    <span>женщина</span>
-                    
-                    <label for="firstSelect" class="form__label">Ваша профессия:</label>
-                    <select id="firstSelect" name="firstSelect" class="form__select" required>
-                        <option selected disabled>Выберите вариант:</option>
-                        <option value="Врач">Врач</option>
-                        <option value="Программист">Программист</option>
-                        <option value="Учитель">Учитель</option>
-                        <option value="Дизайнер">Дизайнер</option>
-                        <option value="Инженер">Инженер</option>
-                        <option value="Продавец">Продавец</option>
-                        <option value="Другое">Другое</option>
-                    </select>
-                    <span id="errorSelect"></span>
-                    
+                <label for="gender" class="form__label">Пол:</label>
+                </br>
+                <input
+                    type="radio"
+                    name="gender"
+                    value="woman"
+                    class="form__input" />
+                <span>Женский</span>
+                </br>
+                
+                <input
+                    type="radio"
+                    name="gender"
+                    value="men"
+                    class="form__input" />
+                <span>Мужской</span>
+                </br>
 
-                    <label for="password" class="form__label">Пароль:</label>
-                    <input type="password" id="password" name="password" class="form__input" minlength="8" pattern = '^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$' placeholder ='Введите пароль' required />
-                    <span id="errorPassword"></span>
-                    
+                <label for="profession" class="form__label">Профессия:</label>
+                <select id="profession" name="profession" class="form__select" placeholder="profession" required >
+                    <option value="Врач">Врач</option>
+                    <option value="Программист">Программист</option>
+                    <option value="Учитель">Учитель</option>
+                    <option value="Дизайнер">Дизайнер</option>
+                    <option value="Инженер">Инженер</option>
+                    <option value="Продавец">Продавец</option>
+                    <option value="Другое">Другое</option>
+                </select>
+                <br />
 
-                    <div class="flex">
-                        <input type="checkbox" id="checkbox1" name="checkboxOne" class="form__checkbox" required/>
-                        <label for="checkbox1">Согласен(-на) на обработку данных</label>
-                        <span id="errorCheckboxOne"></span>
-                    </div>
+                <label for="password" class="form__label">Пароль:</label>
+                <input type="password" name="password" placeholder="Пароль" minlength="2" pattern="......." required />
+                <br />
 
-                    <button type="submit" id="firstButton" name="firstButton" class="form__submit">Отправить</button>
-                </form>
-            </div>
-        </section>
+                <label for="passwordRepeat" class="form__label">Повторите пароль:</label>  
+                <input type="passwordRepeat" name="passwordRepeat" placeholder="Повторите пароль" minlength="2" pattern="......." required />
+                <br />
+                
+                <label class="form__label">Согласие пользователя с обработкой данных</label>
+                <input type="checkbox" name="checkboxOne" value="Согласие с обработкой данных" class="form__checkbox"  required />
+                <span>Согласен с обработкой данных</span>
+                <br />
+
+                <input name="buttonSubmit" type="submit" value="Отправить" class="form__submit" />
+                <br />
+
+            </form>
+        </div>
     </div>
 
     <script src="task2.js"></script>
