@@ -12,69 +12,67 @@
 <body>
     <div class="container">
         <h1>Форма регистрации</h1>
-        <div class="form">
-            <form name="formOne" class="firstForm" novalidate >
+        <form name="registration" class="registration" novalidate >
 
-                <label for="firstName" class="form__label">Имя:</label>
-                <input type="text" name="name" placeholder="Имя" minlength="2" maxlength="20" pattern="......." required />
-                <br />
+            <label for="firstName" class="form__label">Имя:</label>
+            <input type="text" name="name" placeholder="Имя" minlength="2" maxlength="20" pattern="......." required />
+            <span class="error-message" id="name-error"></span>
+            <br />
 
-                <label for="firstEmail" class="form__label">Email:</label>
-                <input type="email" name="email" placeholder="E-Mail" required />
-                <br />
+            <label for="firstEmail" class="form__label">Email:</label>
+            <input type="email" name="email" placeholder="E-Mail" required />
+            <span class="error-message" id="email-error"></span>
+            <br />
 
-                <label for="age" class="form__label">Возраст:</label>
-                <input type="text" name="age" placeholder="Возраст" required />
-                <br />
-                
-                <label for="gender" class="form__label">Пол:</label>
-                </br>
-                <input
-                    type="radio"
-                    name="gender"
-                    value="woman"
-                    class="form__input" />
-                <span>Женский</span>
-                </br>
-                
-                <input
-                    type="radio"
-                    name="gender"
-                    value="men"
-                    class="form__input" />
-                <span>Мужской</span>
-                </br>
+            <label for="age" class="form__label">Возраст:</label>
+            <input type="text" name="age" placeholder="Возраст" required />
+            <span class="error-message" id="age-error"></span>
+            <br />
+            
+            <label for="gender" class="form__label">Пол:</label>
+            </br>
+            <input type="radio" name="gender" value="woman" class="form__input" />
+            <span>Женский</span>
+            </br>
+            
+            <input type="radio" name="gender" value="men" class="form__input" />
+            <span>Мужской</span>
+            <span class="error-message" id="gender-error"></span>
+            </br>
 
-                <label for="profession" class="form__label">Профессия:</label>
-                <select id="profession" name="profession" class="form__select" placeholder="profession" required >
-                    <option value="Врач">Врач</option>
-                    <option value="Программист">Программист</option>
-                    <option value="Учитель">Учитель</option>
-                    <option value="Дизайнер">Дизайнер</option>
-                    <option value="Инженер">Инженер</option>
-                    <option value="Продавец">Продавец</option>
-                    <option value="Другое">Другое</option>
-                </select>
-                <br />
+            <label for="profession" class="form__label">Профессия:</label>
+            <select id="profession" name="profession" class="form__select" placeholder="profession" required >
+                <option value="Врач">Врач</option>
+                <option value="Программист">Программист</option>
+                <option value="Учитель">Учитель</option>
+                <option value="Дизайнер">Дизайнер</option>
+                <option value="Инженер">Инженер</option>
+                <option value="Продавец">Продавец</option>
+                <option value="Другое">Другое</option>
+            </select>
+            <span class="error-message" id="profession-error"></span>
+            <br />
 
-                <label for="password" class="form__label">Пароль:</label>
-                <input type="password" name="password" placeholder="Пароль" minlength="2" pattern="......." required />
-                <br />
+            <label for="password" class="form__label">Пароль:</label>
+            <input type="password" name="password" placeholder="Пароль" minlength="2" pattern="......." required />
+            <span class="error-message" id="password-error"></span>
+            <br />
 
-                <label for="passwordRepeat" class="form__label">Повторите пароль:</label>  
-                <input type="passwordRepeat" name="passwordRepeat" placeholder="Повторите пароль" minlength="2" pattern="......." required />
-                <br />
-                
-                <label class="form__label">Согласие пользователя с обработкой данных</label>
-                <input type="checkbox" name="checkboxOne" value="Согласие с обработкой данных" class="form__checkbox"  required />
-                <span>Согласен с обработкой данных</span>
-                <br />
+            <label for="passwordRepeat" class="form__label">Повторите пароль:</label>  
+            <input type="passwordRepeat" name="passwordRepeat" placeholder="Повторите пароль" minlength="2" pattern="......." required />
+            <span class="error-message" id="passwordRepeat-error"></span>
+            <br />
+            
+            <label class="form__label">Согласие пользователя с обработкой данных</label>
+            <input type="checkbox" name="checkbox" value="Согласие с обработкой данных" class="form__checkbox" required />
+            <span>Согласен с обработкой данных</span>
+            <span class="error-message" id="checkbox-error"></span>
+            <br />
 
-                <input name="buttonSubmit" type="submit" value="Отправить" class="form__submit" />
-                <br />
+            <input name="buttonSubmit" type="submit" value="Отправить" class="form__submit" />
+            <br />
 
-            </form>
-        </div>
+        </form>
     </div>
 
     <script src="task2.js"></script>
