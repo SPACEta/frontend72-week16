@@ -1,6 +1,6 @@
 body {
     font-size: 18px;
-    background-color: #ece08e;
+    background-color: #b0ec8e;
 }
 
 h1 {
@@ -19,12 +19,25 @@ h1 {
     flex-direction: column;
     max-width: 300px;
     padding: 30px 60px;
-    background-color: #abd2eb63;
+    background-color: #e6f587;
 }
 
+.error-message {
+	width: 180px;
+	color: red;
+}
 
+.form__submit {
+    width: 300px;
+    height: 40px;
+    background-color: #bc1a4d;;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    margin-top: 10px;
+}
 
-
-
-
-
+.form__submit:hover {
+    background-color: #214e78;
+    cursor: pointer;
+}

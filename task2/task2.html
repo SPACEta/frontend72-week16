@@ -30,16 +30,17 @@
             <span class="error-message" id="errorAge"></span>
             <br />
             
-            <label for="gender" class="form__label">Пол:</label>
-            </br>
-            <input type="radio" name="gender" value="woman" class="form__input" />
-            <span>Женский</span>
-            </br>
-            
-            <input type="radio" name="gender" value="men" class="form__input" />
-            <span>Мужской</span>
-            <span class="error-message" id="errorGender"></span>
-            </br>
+            <div>
+                <label for="gender" class="form__label">Пол:</label>
+                <br />
+                <input type="radio" name="gender" value="woman" class="form__input" /> 
+                <span>Женский</span>
+                <br />
+                <input type="radio" name="gender" value="men" class="form__input" />
+                <span>Мужской</span>
+                <span class="error-message" id="errorGender"></span>
+            </div>
+            <br />
 
             <label for="profession" class="form__label">Профессия:</label>
             <select id="profession" name="profession" class="form__select" placeholder="Выберите профессию" required >
@@ -66,15 +67,16 @@
             <span class="error-message" id="errorPasswordRepeat"></span>
             <br />
             
-            <label class="form__label">Согласие пользователя с обработкой данных</label>
-            <input type="checkbox" name="checkbox" value="Согласие с обработкой данных" class="form__checkbox" required />
-            <span>Согласен с обработкой данных</span>
-            <span class="error-message" id="errorCheckbox"></span>
+            <div>
+                <label class="form__label">Согласие пользователя с обработкой данных</label>
+                <br />
+                <input type="checkbox" name="checkbox" value="Согласие с обработкой данных" class="form__checkbox" required />
+                <span>Согласен с обработкой данных</span>
+                <span class="error-message" id="errorCheckbox"></span>
+                <br />
+                <input name="buttonSubmit" type="submit" value="Отправить" class="form__submit" />
+            </div>
             <br />
-
-            <input name="buttonSubmit" type="submit" value="Отправить" class="form__submit" />
-            <br />
-
         </form>
     </div>
 
