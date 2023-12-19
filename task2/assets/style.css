@@ -23,7 +23,7 @@ h1 {
 }
 
 .error-message {
-	width: 180px;
+	width: 300px;
 	color: red;
 }
 
@@ -40,4 +40,8 @@ h1 {
 .form__submit:hover {
     background-color: #214e78;
     cursor: pointer;
+}
+
+.error {
+    background-color: #ffdddd;
 }

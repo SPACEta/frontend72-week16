@@ -15,7 +15,7 @@
         <form name="registration" class="registration" novalidate >
 
             <label for="firstName" class="form__label">Имя:</label>
-            <input type="text" name="name" placeholder="Имя" minlength="2" maxlength="20" pattern="[A-Za-zА-Яа-яЁё\s]{2,20}" required />
+            <input type="text" name="nameImput" placeholder="Имя" minlength="2" maxlength="20" pattern="[A-Za-zА-Яа-яЁё\s]{2,20}" required />
             <!--Поле ввода имени: обязательное поле, должно содержать только буквы и пробелы-->
             <span class="error-message" id="errorName"></span>
             <br />
@@ -28,6 +28,7 @@
             <label for="age" class="form__label">Возраст:</label>
             <input type="text" name="age" placeholder="Возраст" required />
             <span class="error-message" id="errorAge"></span>
+            <span class="error-message" id="errorAgeSecond"></span>
             <br />
             
             <div>
@@ -44,6 +45,7 @@
 
             <label for="profession" class="form__label">Профессия:</label>
             <select id="profession" name="profession" class="form__select" placeholder="Выберите профессию" required >
+                <option value="">Выберите профессию</option>
                 <option value="Врач">Врач</option>
                 <option value="Программист">Программист</option>
                 <option value="Учитель">Учитель</option>
@@ -80,7 +82,7 @@
         </form>
     </div>
 
-    <script src="task3.js"></script>
+    <script src="./task2.js"></script>
 </body>
 
 </html>
