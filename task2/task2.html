@@ -15,18 +15,19 @@
         <form name="registration" class="registration" novalidate >
 
             <label for="firstName" class="form__label">Имя:</label>
-            <input type="text" name="name" placeholder="Имя" minlength="2" maxlength="20" pattern="......." required />
-            <span class="error-message" id="name-error"></span>
+            <input type="text" name="name" placeholder="Имя" minlength="2" maxlength="20" pattern="[A-Za-zА-Яа-яЁё\s]{2,20}" required />
+            <!--Поле ввода имени: обязательное поле, должно содержать только буквы и пробелы-->
+            <span class="error-message" id="errorName"></span>
             <br />
 
             <label for="firstEmail" class="form__label">Email:</label>
             <input type="email" name="email" placeholder="E-Mail" required />
-            <span class="error-message" id="email-error"></span>
+            <span class="error-message" id="errorEmail"></span>
             <br />
 
             <label for="age" class="form__label">Возраст:</label>
             <input type="text" name="age" placeholder="Возраст" required />
-            <span class="error-message" id="age-error"></span>
+            <span class="error-message" id="errorAge"></span>
             <br />
             
             <label for="gender" class="form__label">Пол:</label>
@@ -37,11 +38,11 @@
             
             <input type="radio" name="gender" value="men" class="form__input" />
             <span>Мужской</span>
-            <span class="error-message" id="gender-error"></span>
+            <span class="error-message" id="errorGender"></span>
             </br>
 
             <label for="profession" class="form__label">Профессия:</label>
-            <select id="profession" name="profession" class="form__select" placeholder="profession" required >
+            <select id="profession" name="profession" class="form__select" placeholder="Выберите профессию" required >
                 <option value="Врач">Врач</option>
                 <option value="Программист">Программист</option>
                 <option value="Учитель">Учитель</option>
@@ -50,23 +51,25 @@
                 <option value="Продавец">Продавец</option>
                 <option value="Другое">Другое</option>
             </select>
-            <span class="error-message" id="profession-error"></span>
+            <span class="error-message" id="errorProfession"></span>
             <br />
 
             <label for="password" class="form__label">Пароль:</label>
-            <input type="password" name="password" placeholder="Пароль" minlength="2" pattern="......." required />
-            <span class="error-message" id="password-error"></span>
+            <input type="password" name="password" placeholder="Пароль" minlength="2" pattern = '^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$' required />
+            <!--Поле ввода пароля: обязательное поле, должно быть не менее 8 символов длиной и содержать как минимум одну заглавную букву, одну строчную букву и одну цифру-->
+            <span class="error-message" id="errorPassword"></span>
             <br />
 
             <label for="passwordRepeat" class="form__label">Повторите пароль:</label>  
-            <input type="passwordRepeat" name="passwordRepeat" placeholder="Повторите пароль" minlength="2" pattern="......." required />
-            <span class="error-message" id="passwordRepeat-error"></span>
+            <input type="passwordRepeat" name="passwordRepeat" placeholder="Повторите пароль" minlength="2" pattern = '^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$' required />
+            <!--Поле ввода пароля: обязательное поле, должно быть не менее 8 символов длиной и содержать как минимум одну заглавную букву, одну строчную букву и одну цифру-->
+            <span class="error-message" id="errorPasswordRepeat"></span>
             <br />
             
             <label class="form__label">Согласие пользователя с обработкой данных</label>
             <input type="checkbox" name="checkbox" value="Согласие с обработкой данных" class="form__checkbox" required />
             <span>Согласен с обработкой данных</span>
-            <span class="error-message" id="checkbox-error"></span>
+            <span class="error-message" id="errorCheckbox"></span>
             <br />
 
             <input name="buttonSubmit" type="submit" value="Отправить" class="form__submit" />
@@ -75,7 +78,7 @@
         </form>
     </div>
 
-    <script src="task2.js"></script>
+    <script src="task3.js"></script>
 </body>
 
 </html>

@@ -1,14 +1,26 @@
 body {
     font-size: 18px;
+    background-color: #ece08e;
 }
 
 h1 {
     font-size: 2.5rem;
+    color: #bc1a4d;
 }
 
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-
-
+.registration {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    padding: 30px 60px;
+    background-color: #abd2eb63;
+}
 
 
 

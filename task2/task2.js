@@ -1,6 +1,23 @@
-const list = document.getElementById('list');
-const max = document.getElementById('max');
-const min = document.getElementById('min');
+const form = document.forms.registration;
+
+const name = form.elements.name;
+const email = form.elements.email;
+const age = form.elements.age;
+const gender = form.elements.gender;
+const profession = form.elements.profession;
+const password = form.elements.password;
+const passwordRepeat = form.elements.passwordRepeat;
+const checkbox = form.elements.checkbox;
+const buttonSubmit = form.elements.buttonSubmit;
+
+const errorName = document.getElementById('errorName');
+const errorEmail = document.getElementById('errorEmail');
+const errorAge = document.getElementById('errorAge');
+const errorGender = document.getElementById('errorGender');
+const errorProfession = document.getElementById('errorProfession');
+const errorPassword = document.getElementById('errorPassword');
+const errorPasswordRepeat = document.getElementById('errorPasswordRepeat');
+const errorCheckbox = document.getElementById('errorCheckbox');
 
 
 /*3 Используя JavaScript, добавьте обработчик события отправки формы (submit), который будет выполнять следующие действия:
